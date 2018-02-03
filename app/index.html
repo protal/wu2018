@@ -101,6 +101,7 @@
                 body: JSON.stringify(data)
             })
             let result = await response.json()
+            console.log(result);
             switch (result.gender) {
                 case 'Male':
                     document.getElementById('gender').innerHTML = '<i class="fas fa-male"></i>'
