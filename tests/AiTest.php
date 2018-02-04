@@ -66,7 +66,7 @@ final class AITest extends TestCase
     }
     public function testRudeWords_rudeeeeeeee():void
     {
-        $result=AI::getRudeWords('ไอแม่เย็ด หัวควย มึงถอดชุดมาเดี่ยวกับกูอะป่าว ไอ้สาสส');
+        $result=AI::getRudeWords('ไอแม่เย็ด หัวควย มึงถอดชุดมาเดี่ยวกับกูอะป่าว ไอ้สาสส หน้าหี');
         $expected_result='หน้าหี';
         $this->assertContains($expected_result,$result);
     }
