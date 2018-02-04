@@ -40,4 +40,23 @@ final class AITest extends TestCase
         $expected_result='เหี้ย';
         $this->assertContains($expected_result,$result);
     }
+    public function testRudeWords_kuyy():void
+    {
+        $result=AI::getRudeWords('ไอเปรตฟัคยูควย');
+        $expected_result='ควย';
+        $this->assertContains($expected_result,$result);
+    }
+    public function testLanguages_TH():void
+    {
+        $result=AI::getLanguages('กขคงจ');
+        $expected_result='TH';
+        $this->assertContains($expected_result,$result);
+    }
+    public function testLanguages_EN():void
+    {
+        $result=AI::getLanguages('ABCDEFGH');
+        $expected_result='EN';
+        $this->assertContains($expected_result,$result);
+    }
+
 }
